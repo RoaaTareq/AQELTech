@@ -1,0 +1,9 @@
+.topsection{
+    background-color: rgb(2, 2, 39);
+    padding: 120px;
+    color: white;
+}
+.main-title{
+    font-size: 6rem;
+    text-align: center;
+}

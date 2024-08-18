@@ -19,11 +19,13 @@ const Navbar = ({
 
   return (
     <nav className={`navbar ${className}`} {...props}>
-      <a href={brandLink} className="navbar-brand">
+     <div className="container">
+    <div className="d-flex">
+    <a href={brandLink} className="navbar-brand">
         {logo && <img src={logo} alt="Brand Logo" className="navbar-logo" />}
         {brand}
       </a>
-      <ul className="navbar-nav">
+      <ul className="navbar-nav d-flex flex-row">
         {links.map((link, index) => (
           <li key={index} className="nav-item">
             <a href={link.href} className="nav-link">
@@ -60,7 +62,7 @@ const Navbar = ({
             Career
           </a>
           {isCareerDropdownOpen && (
-            <ul className="dropdown-menu">
+            <ul className="dropdown-menu ">
               {careerLinks.map((link, index) => (
                 <li key={index}>
                   <a href={link.href} className="dropdown-item">
@@ -87,6 +89,8 @@ const Navbar = ({
           </a>
         )}
       </div>
+    </div>
+     </div>
     </nav>
   );
 };

@@ -1,5 +1,7 @@
 import React from 'react';
-
+import NavBar from '../../Components/Layout/NavBar/NavBar'
+import Logo from '../../assest/Symbol.png'
+import  './navbar.css'
 const Navbar = () => {
   const navLinks = [
     { href: '/home', label: 'Home' },
@@ -19,14 +21,12 @@ const Navbar = () => {
 
   return (
     <div>
-      <Navbar
-        brand="Your Company"
+      <NavBar
+        brand="AQELTech"
         links={navLinks}
         supportLinks={supportLinks}
         careerLinks={careerLinks}
-        logo="path/to/logo.png"
-        email="info@yourcompany.com"
-        phone="+123456789"
+        logo={Logo} 
         className="navbar-custom"
       />
       {/* Your main content here */}
